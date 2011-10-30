@@ -1,12 +1,23 @@
 #include"stdio.h"
 #include"stdlib.h"
+#include<string.h>
 #include<iostream>
 
 using namespace std;
 
 char * f(char a[ ], int start, int len, int lenA)
 {
-  return NULL;
+  char * result="null";
+  if (start+len>lenA || start < 0 || len<0)
+    return result;
+  result=new char [len];
+  char * origin=result;
+  for(int i=0;i<start;i++)
+    a++;
+  for (int i=0;i<len;i++)
+    *origin++=*a++;
+  *origin='\0';
+  return result;
 }
 
 int main() 
