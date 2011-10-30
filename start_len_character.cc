@@ -6,7 +6,9 @@ using namespace std;
 
 char * f(char a[ ], int start, int len, int lenA)
 {
-  return NULL;
+  if (start+len>lenA)
+    return NULL;
+  char * result=new char [len];
 }
 
 int main() 
