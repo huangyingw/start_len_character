@@ -4,48 +4,53 @@
 
 using namespace std;
 
-int f(int a[ ], int len)
+char * f(char a[ ], int start, int len, int lenA)
 {
-  //X = the sum of the odd numbers in the array
-  //Y = the sum of the even numbers
-  int X=0,Y=0;
-  for (int i=0;i<len;i++)
-  {
-    if (0== a[i]%2)
-      Y+=a[i];
-    else
-      X+=a[i];
-  }
-  return X - Y;
+  return NULL;
 }
 
 int main() 
 {
-  int a[] ={1} ;//1
-  cout<<f(a,sizeof(a)/sizeof(int))<<endl;
+  char  a[] ={'a', 'b', 'c'} ;// null
+  cout<<f(a, 0, 4,sizeof(a)/sizeof(char))<<endl;
 
-  int b[]={1, 2};//-1
-  cout<<f(b,sizeof(b)/sizeof(int))<<endl;
+  char  b[]={'a', 'b', 'c'};// {'a', 'b', 'c'}
+  cout<<f(b, 0, 3,sizeof(b)/sizeof(char))<<endl;
 
-  int c[]={1, 2, 3};//2
-  cout<<f(c,sizeof(c)/sizeof(int))<<endl;
+  char  c[]={'a', 'b', 'c'};// {'a', 'b'}
+  cout<<f(c, 0, 2,sizeof(c)/sizeof(char))<<endl;
 
-  int d[]={1, 2, 3, 4};//-2
-  cout<<f(d,sizeof(d)/sizeof(int))<<endl;
+  char  d[]={'a', 'b', 'c'};// {'a'}
+  cout<<f(d, 0, 1,sizeof(d)/sizeof(char))<<endl;
 
-  int e[]={3, 3, 4, 4};//-2
-  cout<<f(e,sizeof(e)/sizeof(int))<<endl;
+  char  e[]={'a', 'b', 'c'};// null
+  cout<<f(e, 1, 3,sizeof(e)/sizeof(char))<<endl;
 
-  int h[]={3, 2, 3, 4};//0
-  cout<<f(h,sizeof(h)/sizeof(int))<<endl;
+  char  h[]={'a', 'b', 'c'};// {'b', 'c'}
+  cout<<f(h, 1, 2,sizeof(h)/sizeof(char))<<endl;
 
-  int g[]={4, 1, 2, 3};//-2
-  cout<<f(g,sizeof(g)/sizeof(int))<<endl;
+  char  g[]={'a', 'b', 'c'};// {'b'}
+  cout<<f(g, 1, 1,sizeof(g)/sizeof(char))<<endl;
 
-  int j[]={1, 1};//2
-  cout<<f(j,sizeof(j)/sizeof(int))<<endl;
+  char  j[]={'a', 'b', 'c'};// null
+  cout<<f(j, 2, 2,sizeof(j)/sizeof(char))<<endl;
 
-  int i[]={};//0
-  cout<<f(i,sizeof(i)/sizeof(int))<<endl;
+  char  i[]={'a', 'b', 'c'};// {'c'}
+  cout<<f(i, 2, 1,sizeof(i)/sizeof(char))<<endl;
+
+  char  p[]={'a', 'b', 'c'};// null
+  cout<<f(p, 3, 1,sizeof(p)/sizeof(char))<<endl;
+
+  char  k[]={'a', 'b', 'c'};// {}
+  cout<<f(k, 1, 0,sizeof(k)/sizeof(char))<<endl;
+
+  char  l[]={'a', 'b', 'c'};// null
+  cout<<f(l, -1, 2,sizeof(l)/sizeof(char))<<endl;
+
+  char  m[]={'a', 'b', 'c'};// null
+  cout<<f(m, -1, -2,sizeof(m)/sizeof(char))<<endl;
+
+  char  n[]={};// null
+  cout<<f(n, 0, 1,sizeof(n)/sizeof(char))<<endl;
   return 0;
 }
