@@ -1,2 +1,2 @@
 make -B \
-&& ./even_odd.exe
+&& ./start_len_character.exe

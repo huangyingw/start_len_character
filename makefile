@@ -1,3 +1,3 @@
-OBJECTS = even_odd.exe
+OBJECTS = start_len_character.exe
 include ../../GNU_makefile_template
-LOCFLAGS = -I../even_odd
+LOCFLAGS = -I../start_len_character
