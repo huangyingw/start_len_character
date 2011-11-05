@@ -11,12 +11,12 @@ char * f(char a[ ], int start, int len, int lenA)
   if (start+len>lenA || start < 0 || len<0)
     return result;
   result=new char [len];
-  char * origin=result;
+  char * nav=result;
   for(int i=0;i<start;i++)
     a++;
   for (int i=0;i<len;i++)
-    *origin++=*a++;
-  *origin='\0';
+    *nav++=*a++;
+  *nav='\0';
   return result;
 }
 
