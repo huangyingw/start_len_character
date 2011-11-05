@@ -63,5 +63,21 @@ int main()
 
   char  n[]={};// null
   cout<<f(n, 0, 1,sizeof(n)/sizeof(char))<<endl;
+  /*
+   null
+   abc
+   ab
+   a
+   null
+   bc
+   b
+   null
+   c
+   null
+
+   null
+   null
+   null
+   */
   return 0;
 }
