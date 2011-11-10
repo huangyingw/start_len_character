@@ -16,7 +16,6 @@ char * f(char a[ ], int start, int len, int lenA)
     a++;
   for (int i=0;i<len;i++)
     *nav++=*a++;
-  *nav='\0';
   return result;
 }
 
@@ -64,20 +63,20 @@ int main()
   char  n[]={};// null
   cout<<f(n, 0, 1,sizeof(n)/sizeof(char))<<endl;
   /*
-   null
-   abc
-   ab
-   a
-   null
-   bc
-   b
-   null
-   c
-   null
+     null
+     abc
+     ab
+     a
+     null
+     bc
+     b
+     null
+     c
+     null
 
-   null
-   null
-   null
-   */
+     null
+     null
+     null
+     */
   return 0;
 }
