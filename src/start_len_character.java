@@ -1,15 +1,15 @@
 public class start_len_character {
 	static char[] f(char a[], int start, int len) {
-		if (len < 0)
+		if (len <= 0)
 			return "null".toCharArray();
 		int lenA = a.length;
 		int aIndex = 0;
 		char[] result = new char[len];
-		if (start + len > lenA || start < 0 || len < 0)
+		if (start + len > lenA || start < 0)
 			return "null".toCharArray();
-		int origin = 0;
 		for (int i = 0; i < start; i++)
 			aIndex++;
+		int origin = 0;
 		for (int i = 0; i < len; i++)
 			result[origin++] = a[aIndex++];
 		return result;
@@ -46,7 +46,7 @@ public class start_len_character {
 		char p[] = { 'a', 'b', 'c' };// null
 		System.out.println(f(p, 3, 1));
 
-		char k[] = { 'a', 'b', 'c' };// {}
+		char k[] = { 'a', 'b', 'c' };// null
 		System.out.println(f(k, 1, 0));
 
 		char l[] = { 'a', 'b', 'c' };// null
