@@ -9,9 +9,8 @@ public class start_len_character {
 			return "null".toCharArray();
 		for (int i = 0; i < start; i++)
 			aIndex++;
-		int origin = 0;
 		for (int i = 0; i < len; i++)
-			result[origin++] = a[aIndex++];
+			result[i] = a[aIndex++];
 		return result;
 	}
 
